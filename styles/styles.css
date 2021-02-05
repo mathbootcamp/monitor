@@ -9,7 +9,14 @@
  */
 html {
   line-height: 1.8rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
 }
 
 body {
@@ -1597,9 +1604,10 @@ img {
 .pw-menu {
   width: 100%;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   z-index: 10;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .pw-menu.pw-menu-fixed {
@@ -1612,6 +1620,12 @@ img {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 2rem;
+  padding-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pw-menu .pw-menu-logo p {
   display: flex;
   justify-content: center;
 }
@@ -1642,6 +1656,13 @@ img {
   line-height: 4rem;
 }
 
+@media screen and (max-width: 960px) {
+  .pw-title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
 .pure-img-responsive {
   max-width: 100%;
   height: auto;
@@ -1649,7 +1670,7 @@ img {
 
 .pw-button {
   display: block;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -1949,8 +1970,15 @@ img {
 }
 
 .pw-text-medium {
-  font-size: medium;
-  line-height: 1.7rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+  .pw-sp-text-default {
+    font-size: inherit;
+    line-height: inherit;
+  }
 }
 
 .pw-text-large {
@@ -2034,41 +2062,6 @@ a.pure-button-primary {
   color: #3295b3;
   border-radius: 5px;
   font-size: 120%;
-}
-
-/*
- * -- MENU STYLES --
- * I want to customize how my .pure-menu looks at the top of the page
- */
-.home-menu {
-  padding: 0.5em;
-  text-align: center;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.home-menu {
-  background: #1d5667;
-}
-
-.pure-menu.pure-menu-fixed {
-  /* Fixed menus normally have a border at the bottom. */
-  border-bottom: none;
-  /* I need a higher z-index here because of the scroll-over effect. */
-  z-index: 4;
-}
-
-.home-menu .pure-menu-heading {
-  color: white;
-  font-weight: 400;
-  font-size: 120%;
-}
-
-.home-menu .pure-menu-selected a {
-  color: white;
-}
-
-.home-menu a {
-  color: white;
 }
 
 .splash {
